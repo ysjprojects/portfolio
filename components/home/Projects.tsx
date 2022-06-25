@@ -1,6 +1,6 @@
 import React from "react";
 import useSWR from "swr";
-import $ from "jquery";
+import $ from "jquery"
 
 type Project = {
     id: number
