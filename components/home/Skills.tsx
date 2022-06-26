@@ -46,35 +46,35 @@ const Skills = () => {
     const skills = data as Data
 
 
-    const frontend = skills.filter(skill => skill.type === 'frontend').map(skill => {
+    const frontend = skills.filter(skill => skill.type === 'frontend').map((skill, index) => {
         return (
-            <RenderSkill skill={skill} />
+            <RenderSkill key={index} skill={skill} />
         )
     })
-    const backend = skills.filter(skill => skill.type === 'backend').map(skill => {
+    const backend = skills.filter(skill => skill.type === 'backend').map((skill, index) => {
         return (
-            <RenderSkill skill={skill} />
+            <RenderSkill key={index} skill={skill} />
         )
     })
-    const analytics = skills.filter(skill => skill.type === 'analytics').map(skill => {
+    const analytics = skills.filter(skill => skill.type === 'analytics').map((skill, index) => {
         return (
-            <RenderSkill skill={skill} />
+            <RenderSkill key={index} skill={skill} />
         )
     })
-    const blockchain = skills.filter(skill => skill.type === 'blockchain').map(skill => {
+    const blockchain = skills.filter(skill => skill.type === 'blockchain').map((skill, index) => {
         return (
-            <RenderSkill skill={skill} />
+            <RenderSkill key={index} skill={skill} />
         )
     })
-    const programming = skills.filter(skill => skill.type === 'programming').map(skill => {
+    const programming = skills.filter(skill => skill.type === 'programming').map((skill, index) => {
         return (
-            <RenderSkill skill={skill} />
+            <RenderSkill key={index} skill={skill} />
         )
     })
 
-    const miscellaneous = skills.filter(skill => skill.type === 'miscellaneous').map(skill => {
+    const miscellaneous = skills.filter(skill => skill.type === 'miscellaneous').map((skill, index) => {
         return (
-            <RenderSkill skill={skill} />
+            <RenderSkill key={index} skill={skill} />
         )
     })
 

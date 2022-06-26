@@ -23,11 +23,11 @@ const badgeColor = (type: string) => {
 }
 
 const NestedCertifs = ({ titles, id }: { titles: String[], id: number }) => {
-    const nestedCertifs = titles.map((title) => {
+    const nestedCertifs = titles.map((title, index) => {
         return (
 
             <li>
-                <h5>{title}</h5>
+                <h5 key={index}>{title}</h5>
             </li>
         )
     })
@@ -58,7 +58,7 @@ const Certifications = () => {
     const certifs = data as Data
     const certifsList = certifs.map((certif) => {
         return (
-            <li className="list-unstyled mb-5"><h3><a href={certif.url} target="_blank" rel="noreferrer">{certif.title}</a> &nbsp;<span className="d-none d-md-inline-block text-muted">&bull;&nbsp; {certif.year}</span><span className={`d-none d-md-inline-block badge bg-${badgeColor(certif.type)} ms-3`}>{certif.type}</span></h3>
+            <li key={certif.id} className="list-unstyled mb-5"><h3><a href={certif.url} target="_blank" rel="noreferrer">{certif.title}</a> &nbsp;<span className="d-none d-md-inline-block text-muted">&bull;&nbsp; {certif.year}</span><span className={`d-none d-md-inline-block badge bg-${badgeColor(certif.type)} ms-3`}>{certif.type}</span></h3>
 
                 {
                     certif.courses.length !== 0 ?
