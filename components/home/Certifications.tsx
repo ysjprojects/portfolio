@@ -26,8 +26,8 @@ const NestedCertifs = ({ titles, id }: { titles: String[], id: number }) => {
     const nestedCertifs = titles.map((title, index) => {
         return (
 
-            <li>
-                <h5 key={index}>{title}</h5>
+            <li key={index}>
+                <h5>{title}</h5>
             </li>
         )
     })
