@@ -47,7 +47,7 @@ const Awards = () => {
 
     const awardsList = awards.map((award) => {
         return (
-            <RenderAward award={award} />
+            <RenderAward key={award.id} award={award} />
         )
     })
 
