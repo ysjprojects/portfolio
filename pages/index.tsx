@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <><Head>
-      <title>SJ's Portfolio</title>
+      <title>SJ&apos;s Portfolio</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
       <div>

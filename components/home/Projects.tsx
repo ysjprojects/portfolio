@@ -22,7 +22,7 @@ const RenderProject = ({ project }: {
     const imgId = `project-img-${project.id}`
     return (
 
-        <div className="col">
+        <div className="col" key={project.id}>
             <div className="card h-100 bg-transparent border-light">
                 <a href={project.url} target="_blank" rel="noreferrer">
                     <img id={imgId} onMouseEnter={() => toggleImg(imgId)} onMouseLeave={() => toggleImg(imgId)} src={`/img/projects/${project.thumbnail}`} className="card-img-top" alt={project.name} />

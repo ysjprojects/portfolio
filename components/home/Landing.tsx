@@ -42,7 +42,7 @@ const Landing = () => {
                     <div className="text-center text-lg-start offset-lg-1 col-lg-6">
                         <div id="landing-div-section-1">
                             <h1 className="text-uppercase display-4">
-                                Hi, I'm SJ
+                                Hi, I&apos;m SJ
                             </h1>
 
                             <h1 className="d-none d-md-block">
@@ -53,7 +53,7 @@ const Landing = () => {
                                 I like to build stuff
                             </h3>
                             <h4 className="d-none d-md-block">
-                                I am a software developer and tech enthusiast from Singapore <span className="fi fi-sg"></span>
+                                I&apos;m a software developer and tech enthusiast from Singapore <span className="fi fi-sg"></span>
                             </h4>
                             <br />
 
@@ -88,9 +88,9 @@ const Landing = () => {
                                 <h5>
                                     {stats.SKILLS.map((skill, index) => {
                                         if (index === stats.SKILLS.length - 1) {
-                                            return (<span>{skill}</span>)
+                                            return (<span key={index}>{skill}</span>)
                                         }
-                                        return (<span>{skill} &nbsp;&bull;&nbsp; </span>)
+                                        return (<span key={index}>{skill} &nbsp;&bull;&nbsp; </span>)
                                     })}
                                 </h5>
                                 <Row className="mt-5 mb-3 ms-2 me-2">
