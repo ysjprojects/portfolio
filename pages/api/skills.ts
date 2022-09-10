@@ -7,7 +7,7 @@ import { SKILLS } from "../../data/skills";
 type Entry = {
   id: number
   name: string,
-  type: string,
+  imgurl: string,
   startYear: number
 }
 

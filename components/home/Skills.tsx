@@ -1,17 +1,32 @@
 import React from "react"
 import useSWR from "swr"
+import Image from 'next/image'
+
+
 
 
 type Skill = {
     id: number
     name: string,
-    type: string,
+    imgurl: string,
     startYear: number
 }
 
 type Data = Skill[]
 
+const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
+
+const makeVisible = async (id: number) => {
+    document.getElementById(`skill-info-${id}`)!.style.display = "block"
+    await delay(5000)
+    document.getElementById(`skill-info-${id}`)!.style.display = "none"
+
+
+
+}
+
 const RenderSkill = ({ skill }: { skill: Skill }) => {
+    const imgurl: string = `/img/skills/${skill.imgurl}`
     const getYears = (currYear: number, startYear: number) => {
         if (currYear - startYear === 0)
             return '<1 year'
@@ -24,8 +39,40 @@ const RenderSkill = ({ skill }: { skill: Skill }) => {
     let currYear = d.getFullYear();
 
     return (
-        <div>
-            <h5 className="mb-0">
+        <div className="col ps-0 pe-0" style={{ cursor: 'pointer' }} onClick={() => makeVisible(skill.id)}>
+            <div style={{ paddingTop: '100%', position: 'relative' }}>
+                <div className="prevent-select">
+                    <Image src={imgurl} alt={skill.name} layout='fill' />
+                </div>
+
+                <div id={`skill-info-${skill.id}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'none' }}>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '100%',
+                        width: '100%',
+                        background: 'rgba(12, 12, 12, 0.9)',
+
+                    }}>
+                        <div className="text-center">
+                            <h5 className="mb-0">
+                                {skill.name}
+                            </h5>
+                            {skill.startYear > 0 ?
+                                <p className="mb-2">
+                                    {getYears(currYear, skill.startYear)
+                                    }
+                                </p> : <br></br>}
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            {/*<h5 className="mb-0">
                 {skill.name}
             </h5>
             {skill.startYear > 0 ?
@@ -33,8 +80,8 @@ const RenderSkill = ({ skill }: { skill: Skill }) => {
                     {getYears(currYear, skill.startYear)
                     }
                 </p> : <br></br>
-            }
-        </div>
+            }*/}
+        </div >
     )
 }
 
@@ -44,37 +91,70 @@ const Skills = () => {
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
     const skills = data as Data
+    console.log(skills)
+
+    const getSkillsByCat = (category: string) => {
+        let indicesListByCat: {
+            [category: string]: number[]
+        }
+        indicesListByCat = {
+            'frontend': [1, 2, 3, 18, 4, 5, 22, 30],
+            'backend': [6, 7, 9, 10],
+            'analytics': [12, 13, 21],
+            'python': [32, 33, 34, 35, 36, 37, 31],
+            'blockchain': [15, 19, 24, 16, 20, 14],
+            'cloud': [27, 28],
+            'miscellaneous': [23, 11, 17, 25, 26, 29]
+        }
+        let indices: number[] = indicesListByCat[category]
+        let filteredSkills: Data = []
+        indices.forEach((index) => {
+            let skillArr = skills.filter(skill => skill.id === index)
+            if (skillArr.length > 0) {
+                filteredSkills.push(skillArr[0])
+            }
+        })
+        return filteredSkills
+
+    }
 
 
-    const frontend = skills.filter(skill => skill.type === 'frontend').map((skill, index) => {
+    const frontend = getSkillsByCat('frontend').map((skill) => {
         return (
-            <RenderSkill key={index} skill={skill} />
+            <RenderSkill key={skill.id} skill={skill} />
         )
     })
-    const backend = skills.filter(skill => skill.type === 'backend').map((skill, index) => {
+    const backend = getSkillsByCat('backend').map((skill) => {
         return (
-            <RenderSkill key={index} skill={skill} />
+            <RenderSkill key={skill.id} skill={skill} />
         )
     })
-    const analytics = skills.filter(skill => skill.type === 'analytics').map((skill, index) => {
+    const analytics = getSkillsByCat('analytics').map((skill) => {
         return (
-            <RenderSkill key={index} skill={skill} />
+            <RenderSkill key={skill.id} skill={skill} />
         )
     })
-    const blockchain = skills.filter(skill => skill.type === 'blockchain').map((skill, index) => {
+    const blockchain = getSkillsByCat('blockchain').map((skill) => {
         return (
-            <RenderSkill key={index} skill={skill} />
-        )
-    })
-    const programming = skills.filter(skill => skill.type === 'programming').map((skill, index) => {
-        return (
-            <RenderSkill key={index} skill={skill} />
+            <RenderSkill key={skill.id} skill={skill} />
         )
     })
 
-    const miscellaneous = skills.filter(skill => skill.type === 'miscellaneous').map((skill, index) => {
+    const pythonDataScience = getSkillsByCat('python').map((skill) => {
         return (
-            <RenderSkill key={index} skill={skill} />
+            <RenderSkill key={skill.id} skill={skill} />
+        )
+    })
+
+    const cloud = getSkillsByCat('cloud').map((skill) => {
+        return (
+            <RenderSkill key={skill.id} skill={skill} />
+        )
+    })
+
+    const miscellaneous = getSkillsByCat('miscellaneous').map((skill) => {
+        return (
+            <RenderSkill key={skill.id} skill={skill} />
         )
     })
 
@@ -84,14 +164,17 @@ const Skills = () => {
                 <div className="mb-5">
                     <h1 className="spaced-out display-4 text-uppercase text-center"><span className="text-info">s</span><span className="text-warning">k</span><span className="text-light">i</span><span className="text-info">l</span><span className="text-warning">l</span><span className="text-light">s</span></h1>
                 </div>
-                <div className="row row-cols-2 row-cols-md-3 g-4">
+                <div className="row row-cols-1 row-cols-md-2 g-4">
                     <div className="col">
                         <div className="card bg-transparent h-100 border-info">
                             <div className="card-header text-info border-info text-uppercase">
                                 front-end
                             </div>
-                            <div className="card-body text-info">
-                                {frontend}
+                            <div className="card-body text-info pt-0 pb-0">
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                    {frontend}
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -100,8 +183,10 @@ const Skills = () => {
                             <div className="card-header border-warning text-warning text-uppercase">
                                 back-end
                             </div>
-                            <div className="card-body text-warning">
-                                {backend}
+                            <div className="card-body text-warning pt-0 pb-0">
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                    {backend}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -110,8 +195,11 @@ const Skills = () => {
                             <div className="card-header text-uppercase border-light text-light">
                                 analytics
                             </div>
-                            <div className="card-body text-light">
-                                {analytics}
+                            <div className="card-body text-light pt-0 pb-0">
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+
+                                    {analytics}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,18 +208,24 @@ const Skills = () => {
                             <div className="card-header text-uppercase border-info text-info">
                                 blockchain
                             </div>
-                            <div className="card-body text-info">
-                                {blockchain}
+                            <div className="card-body text-info pt-0 pb-0">
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+
+                                    {blockchain}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="col">
                         <div className="card bg-transparent h-100 border-warning">
                             <div className="card-header text-uppercase border-warning text-warning">
-                                programming
+                                python data science
                             </div>
-                            <div className="card-body text-warning">
-                                {programming}
+                            <div className="card-body text-warning pt-0 pb-0">
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+
+                                    {pythonDataScience}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,10 +233,27 @@ const Skills = () => {
                     <div className="col">
                         <div className="card bg-transparent h-100 border-light">
                             <div className="card-header text-uppercase border-light text-light">
+                                cloud
+                            </div>
+                            <div className="card-body text-light pt-0 pb-0">
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+
+                                    {cloud}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col">
+                        <div className="card bg-transparent h-100 border-info">
+                            <div className="card-header text-uppercase border-info text-info">
                                 miscellaneous
                             </div>
-                            <div className="card-body text-light">
-                                {miscellaneous}
+                            <div className="card-body text-info pt-0 pb-0">
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+
+                                    {miscellaneous}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -2,184 +2,218 @@ export const SKILLS = [
     {
         id: 1,
         name: 'HTML',
-        type: 'frontend',
+        imgurl: 'html.png',
         startYear: 2016
     },
     {
         id: 2,
         name: 'CSS',
-        type: 'frontend',
+        imgurl: 'css.png',
         startYear: 2016
     },
     {
         id: 3,
         name: 'Javascript',
-        type: 'frontend',
+        imgurl: 'js.jpg',
         startYear: 2016
     },
     {
         id: 4,
-        name: 'React.js',
-        type: 'frontend',
+        name: 'ReactJS',
+        imgurl: 'react.png',
         startYear: 2016
     },
     {
         id: 5,
-        name: 'Vue.js',
-        type: 'frontend',
+        name: 'VueJS',
+        imgurl: 'vue.png',
         startYear: 2020
     },
     {
         id: 6,
-        name: 'Node.js',
-        type: 'backend',
+        name: 'NodeJS',
+        imgurl: 'nodejs.png',
         startYear: 2016
     },
     {
         id: 7,
         name: 'Flask',
-        type: 'backend',
+        imgurl: 'flask.jpg',
         startYear: 2016
-    },
-    {
-        id: 8,
-        name: 'Rails',
-        type: 'backend',
-        startYear: 2019
     },
     {
         id: 9,
         name: 'SQL',
-        type: 'backend',
+        imgurl: 'sql.png',
         startYear: 2016
     },
     {
         id: 10,
         name: 'mongoDB',
-        type: 'backend',
+        imgurl: 'mongodb.jpg',
         startYear: 2021
     },
     {
         id: 11,
-        name: 'postgresql',
-        type: 'backend',
-        startYear: 2020
+        name: 'C++',
+        imgurl: 'cpp.png',
+        startYear: 2017
     },
-
     {
         id: 12,
         name: 'R',
-        type: 'analytics',
+        imgurl: 'r.jpg',
         startYear: 2019
     },
     {
         id: 13,
         name: 'Tableau',
-        type: 'analytics',
+        imgurl: 'tableau.jpg',
         startYear: 2016
     },
     {
         id: 14,
-        name: 'Python (Numpy & Pandas)',
-        type: 'analytics',
-        startYear: 2018
+        name: 'Chainlink',
+        imgurl: 'link.png',
+        startYear: 2022
     },
-
     {
         id: 15,
         name: 'Solidity',
-        type: 'blockchain',
+        imgurl: 'solidity.png',
         startYear: 2020
     },
     {
         id: 16,
-        name: 'Web3.js',
-        type: 'blockchain',
+        name: 'Truffle',
+        imgurl: 'trufflejs.png',
         startYear: 2020
     },
     {
         id: 17,
-        name: 'Truffle',
-        type: 'blockchain',
-        startYear: 2020
+        name: 'Java',
+        imgurl: 'java.png',
+        startYear: 2021
     },
     {
         id: 18,
-        name: 'Python',
-        type: 'programming',
-        startYear: 2016
+        name: 'Typescript',
+        imgurl: 'ts.png',
+        startYear: 2021
     },
     {
         id: 19,
-        name: 'C++',
-        type: 'programming',
-        startYear: 2017
-    },
-    {
-        id: 20,
-        name: 'Java',
-        type: 'programming',
-        startYear: 2021
-    },
-    {
-        id: 21,
-        name: 'Ruby',
-        type: 'programming',
-        startYear: 2019
-    },
-    {
-        id: 22,
-        name: 'Typescript',
-        type: 'programming',
-        startYear: 2021
-    },
-    {
-        id: 23,
-        name: 'Language: English, Mandarin',
-        type: 'miscellaneous',
-        startYear: 0
-    },
-    {
-        id: 24,
-        name: 'Leadership',
-        type: 'miscellaneous',
-        startYear: 0
-    },
-    {
-        id: 25,
-        name: 'Communication',
-        type: 'miscellaneous',
-        startYear: 0
-    },
-    {
-        id: 26,
-        name: 'Critical Thinking',
-        type: 'miscellaneous',
-        startYear: 0
-    },
-    {
-        id: 27,
-        name: 'Adaptability',
-        type: 'miscellaneous',
-        startYear: 0
-    },
-    {
-        id: 28,
         name: 'Rust',
-        type: 'programming',
+        imgurl: 'rust.png',
         startYear: 2022
     },
 
     {
-        id: 28,
+        id: 20,
         name: 'Moralis',
-        type: 'blockchain',
+        imgurl: 'moralis.png',
+        startYear: 2022
+    },
+    {
+        id: 21,
+        name: 'Looker',
+        imgurl: 'looker.png',
+        startYear: 2022
+    },
+    {
+        id: 22,
+        name: 'NextJS',
+        imgurl: 'nextjs.png',
+        startYear: 2022
+    },
+    {
+        id: 23,
+        name: 'Git',
+        imgurl: 'git.png',
+        startYear: 2016
+    },
+    {
+        id: 24,
+        name: 'EthersJS',
+        imgurl: 'ethersjs.png',
+        startYear: 2020
+    },
+    {
+        id: 25,
+        name: 'Docker',
+        imgurl: 'docker.png',
+        startYear: 2021
+    },
+    {
+        id: 26,
+        name: 'Jira',
+        imgurl: 'jira.png',
+        startYear: 2022
+    },
+    {
+        id: 27,
+        name: 'Amazon EMR',
+        imgurl: 'emr.png',
         startYear: 2022
     },
     {
         id: 28,
-        name: 'Looker',
-        type: 'analytics',
+        name: 'Amazon EC2',
+        imgurl: 'ec2.png',
+        startYear: 2021
+    },
+    {
+        id: 29,
+        name: 'Apache Airflow',
+        imgurl: 'airflow.png',
+        startYear: 2022
+    },
+    {
+        id: 30,
+        name: 'Firebase',
+        imgurl: 'firebase.png',
+        startYear: 2022
+    },
+    {
+        id: 31,
+        name: 'Keras',
+        imgurl: 'keras.png',
+        startYear: 2022
+    },
+    {
+        id: 32,
+        name: 'Numpy',
+        imgurl: 'numpy.png',
+        startYear: 2019
+    },
+    {
+        id: 33,
+        name: 'Pandas',
+        imgurl: 'pandas.png',
+        startYear: 2019
+    },
+    {
+        id: 34,
+        name: 'Matplotlib',
+        imgurl: 'matplotlib.png',
+        startYear: 2019
+    },
+    {
+        id: 35,
+        name: 'Scikit-learn',
+        imgurl: 'sklearn.png',
+        startYear: 2022
+    },
+    {
+        id: 36,
+        name: 'Statsmodel',
+        imgurl: 'statsmodel.png',
+        startYear: 2021
+    },
+    {
+        id: 37,
+        name: 'Seaborn',
+        imgurl: 'seaborn.png',
         startYear: 2022
     },
 
