@@ -13,14 +13,14 @@ type Data = {
     url: string
 }[]
 
-const Landing = ({ setLandingIsLoaded }: { setLandingIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
+const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const { data, error } = useSWR('/api/socials', (url: string) => fetch(url).then(res => res.json()))
     const [modal, setModal] = useState(false);
 
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
 
-    setLandingIsLoaded(true)
+    setIsLoaded(true)
 
 
     const toggle = () => setModal(!modal);

@@ -9,10 +9,12 @@ type Data = {
     url: string
 }[]
 
-const Final = () => {
+const Final = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const { data, error } = useSWR('/api/socials', (url: string) => fetch(url).then(res => res.json()))
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
+
+    setIsLoaded(true)
 
     const socials = data as Data
 

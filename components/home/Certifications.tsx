@@ -50,11 +50,14 @@ const NestedCertifs = ({ titles, id }: { titles: String[], id: number }) => {
     )
 }
 
-const Certifications = () => {
+const Certifications = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
     const { data, error } = useSWR('/api/certifications', (url: string) => fetch(url).then(res => res.json()))
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
+
+    setIsLoaded(true)
+
     const certifs = data as Data
     const certifsList = certifs.map((certif) => {
         return (

@@ -1,6 +1,10 @@
+import React, { useEffect } from "react";
 
+const About = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
-const About = () => {
+    useEffect(() => {
+        setIsLoaded(true)
+    }, [])
     return (
         <div id="about-div" className="text-start bg-dark">
             <div className="container-fluid pt-5 pb-5">

@@ -85,11 +85,14 @@ const RenderSkill = ({ skill }: { skill: Skill }) => {
     )
 }
 
-const Skills = () => {
+const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
     const { data, error } = useSWR('/api/skills', (url: string) => fetch(url).then(res => res.json()))
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
+
+    setIsLoaded(true)
+
     const skills = data as Data
     console.log(skills)
 

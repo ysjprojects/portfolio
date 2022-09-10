@@ -39,10 +39,12 @@ const RenderProject = ({ project }: {
 }
 
 
-const Projects = () => {
+const Projects = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const { data, error } = useSWR('/api/projects', (url: string) => fetch(url).then(res => res.json()))
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
+
+    setIsLoaded(true)
 
     const projects = data as Data
 
