@@ -38,6 +38,51 @@ const RenderProject = ({ project }: {
     )
 }
 
+const RenderTitle = () => {
+    return (
+        <div style={{ maxWidth: '250px', margin: '0 auto' }} className="row row-cols-6 text-uppercase text-center">
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1>
+                        <span className="text-info">b</span>
+
+                    </h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1><span className="text-warning">u</span></h1>
+
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">i</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-info">l</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-warning">d</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">s</span></h1>
+                </div>
+            </div>
+        </div>
+
+    )
+}
 
 const Projects = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const { data, error } = useSWR('/api/projects', (url: string) => fetch(url).then(res => res.json()))
@@ -58,8 +103,7 @@ const Projects = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateA
         <div id="projects-div" className="bg-dark">
             <div className="container pt-5 pb-5">
                 <div className="mb-5">
-                    <h1 className="d-none d-md-block spaced-out display-4 text-uppercase text-center">&nbsp;projects</h1>
-                    <h1 className="d-block d-md-none spaced-out-mobile text-uppercase text-center">projects</h1>
+                    <RenderTitle />
                 </div>
                 <div className="ps-lg-5 pe-lg-5">
                     <div className="ps-lg-5 pe-lg-5">

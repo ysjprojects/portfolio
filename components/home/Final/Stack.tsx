@@ -2,7 +2,7 @@ import React from "react";
 
 
 const Stack = () => {
-    const stacks = ['NextJS', 'ReactJS', 'Reactstrap', 'FontAwesome', 'Typescript', "HTML", "CSS"].map((item) => {
+    const stacks = ['NextJS', 'ReactJS', 'Reactstrap', 'FontAwesome', 'Typescript', "HTML", "CSS", "PDFObject"].map((item) => {
 
         return (<li className="col" key={item}><h5>
             {item}

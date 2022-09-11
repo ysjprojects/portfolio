@@ -67,6 +67,53 @@ const RenderAward = ({ award }: { award: Award }) => {
 
     )
 }
+
+const RenderTitle = () => {
+    return (
+        <div style={{ maxWidth: '250px', margin: '0 auto' }} className="row row-cols-6 text-uppercase text-center">
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1>
+                        <span className="text-info">a</span>
+
+                    </h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1><span className="text-warning">w</span></h1>
+
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">a</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-info">r</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-warning">d</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">s</span></h1>
+                </div>
+            </div>
+        </div>
+
+    )
+}
+
 const Awards = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
     const { data, error } = useSWR('/api/awards', (url: string) => fetch(url).then(res => res.json()))
@@ -88,7 +135,7 @@ const Awards = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
 
             <div className="container py-5" style={{ maxWidth: "970px" }}>
                 <div className="mb-5">
-                    <h1 className="spaced-out display-4 text-uppercase text-center">&nbsp;awards</h1>
+                    <RenderTitle />
                 </div>
                 <div className="row row-cols-2 row-cols-md-3 g-4">
                     {awardsList}

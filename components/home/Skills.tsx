@@ -27,6 +27,52 @@ const toggleVisibility = async (id: number) => {
 
 }
 
+const RenderTitle = () => {
+    return (
+        <div style={{ maxWidth: '250px', margin: '0 auto' }} className="row row-cols-6 text-uppercase text-center">
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1>
+                        <span className="text-info">s</span>
+
+                    </h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1><span className="text-warning">k</span></h1>
+
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">i</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-info">l</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-warning">l</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">s</span></h1>
+                </div>
+            </div>
+        </div>
+
+    )
+}
+
 const RenderSkill = ({ skill }: { skill: Skill }) => {
     const imgurl: string = `/img/skills/${skill.imgurl}`
     const getYears = (currYear: number, startYear: number) => {
@@ -167,7 +213,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
         <div id="skills-div" className="text-start">
             <div className="container pt-5 pb-5">
                 <div className="mb-5">
-                    <h1 className="spaced-out display-4 text-uppercase text-center"><span className="text-info">s</span><span className="text-warning">k</span><span className="text-light">i</span><span className="text-info">l</span><span className="text-warning">l</span><span className="text-light">s</span></h1>
+                    <RenderTitle />
                 </div>
                 <div className="row row-cols-1 row-cols-md-2 g-4">
                     <div className="col">
