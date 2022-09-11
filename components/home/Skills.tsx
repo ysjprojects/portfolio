@@ -16,12 +16,14 @@ type Data = Skill[]
 
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
-const makeVisible = async (id: number) => {
-    document.getElementById(`skill-info-${id}`)!.style.display = "block"
-    await delay(5000)
-    document.getElementById(`skill-info-${id}`)!.style.display = "none"
-
-
+const toggleVisibility = async (id: number) => {
+    let display = document.getElementById(`skill-info-${id}`)!.style.display
+    if (display === "block") {
+        document.getElementById(`skill-info-${id}`)!.style.display = "none"
+    }
+    else {
+        document.getElementById(`skill-info-${id}`)!.style.display = "block"
+    }
 
 }
 
@@ -39,7 +41,7 @@ const RenderSkill = ({ skill }: { skill: Skill }) => {
     let currYear = d.getFullYear();
 
     return (
-        <div className="col ps-0 pe-0" style={{ cursor: 'pointer' }} onClick={() => makeVisible(skill.id)}>
+        <div className="col ps-0 pe-0" style={{ cursor: 'pointer' }} onClick={() => toggleVisibility(skill.id)}>
             <div style={{ paddingTop: '100%', position: 'relative' }}>
                 <div className="prevent-select">
                     <Image src={imgurl} alt={skill.name} layout='fill' />

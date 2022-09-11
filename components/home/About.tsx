@@ -30,9 +30,9 @@ const About = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateActi
                     <div className="col-12 col-md-10">
                         <div className="mt-3 mt-md-0 ms-md-3">
                             <h1 className="display-4">About Me</h1>
-                            <p className="lead">I am an avid full-stack developer and data enthusiast.</p>
-                            <p className="lead">I am fascinated with the world of blockchain and decentralized finance.</p>
-                            <p className="lead">In the future, I hope to make a positive impact on the field of computing and information technology.</p>
+                            <p className="lead">I am an avid full-stack developer and aspiring data scientist.</p>
+                            <p className="lead">I am fascinated by the world of blockchain and decentralized finance.</p>
+                            <p className="lead">In the future, I hope to make a positive impact in the field of computing and information technology.</p>
 
                         </div>
 

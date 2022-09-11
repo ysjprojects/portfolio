@@ -12,24 +12,54 @@ type Award = {
 }
 
 type Data = Award[]
+const toggleVisibility = async (id: number) => {
+    let display = document.getElementById(`award-info-${id}`)!.style.display
+    if (display === "block") {
+        document.getElementById(`award-info-${id}`)!.style.display = "none"
+    }
+    else {
+        document.getElementById(`award-info-${id}`)!.style.display = "block"
+    }
+
+}
 
 const RenderAward = ({ award }: { award: Award }) => {
+    const getColor = (prize: string) => {
+        switch (prize) {
+            case "1st":
+                return "#FFD700"
+            case "2nd":
+                return "#C0C0C0"
+            case "3rd":
+                return "#CD7F32"
+            default:
+                return "#6495ED"
+        }
+    }
+
     return (
 
         <div className="col">
             <div className="card h-100 bg-transparent border-light">
-                <img src={`/img/awards/${award.thumbnail}`} className="card-img-top" alt={award.name} />
+                <div className="prevent-select" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => toggleVisibility(award.id)}>
+                    <img src={`/img/awards/${award.thumbnail}`} className="card-img-top" alt={award.name} />
+                    <div id={`award-info-${award.id}`} style={{ display: 'none', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+                        <div style={{
+                            display: 'flex', justifyContent: 'center',
+                            alignItems: 'center',
+                            height: '100%',
+                            width: '100%',
+                            background: 'rgba(12, 12, 12, 0.9)'
+                        }}>
+                            <h1 style={{ color: getColor(award.prize) }}>{award.prize}</h1>
+                        </div>
+                    </div>
+                </div>
                 <div className="card-body">
-                    <div className="d-md-block d-none">
+                    <div>
                         <h5 className="card-title">{award.name}</h5>
-                        <h3 className="card-text text-half-muted">{award.prize}</h3>
-
                     </div>
-                    <div className="d-md-none d-block">
-                        <p style={{ fontSize: '1rem' }} className="card-title">{award.name}</p>
-                        <h5 className="card-text text-half-muted">{award.prize}</h5>
 
-                    </div>
                 </div>
             </div>
         </div>
