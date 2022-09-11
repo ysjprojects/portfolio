@@ -13,7 +13,7 @@ type Data = {
 
 const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const { data, error } = useSWR('/api/socials', (url: string) => fetch(url).then(res => res.json()))
-    
+
 
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
@@ -21,7 +21,7 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
     setIsLoaded(true)
 
 
-    
+
 
     const socials = data as Data
 
@@ -70,15 +70,12 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
                         </div>
 
                     </div>
-                    
 
-                    <div className="col-lg-2">
-                    </div>
                 </div>
 
             </div>
 
-            
+
 
 
 

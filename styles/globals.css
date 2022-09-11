@@ -18,6 +18,7 @@ a {
 
 
 #landing-div {
+  min-height: 100vh;
   color: whitesmoke;
   background-size: cover;
   background-image: #121212;
@@ -146,32 +147,22 @@ button:focus {
   font-size: 1em;
 }
 
-
-@media (min-width: 992px) {
-  #landing-div {
-    min-height: 100vh;
-  }
-
-  #landing-div-container {
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  #landing-div-section-1 {
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-  }
+#landing-div-container {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-#landing-div-section-2 {
-  border-radius: 3rem;
-  min-height: 50vh;
+#landing-div-section-1 {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
 }
+
+
 
 .modal {
   background-color: transparent;
