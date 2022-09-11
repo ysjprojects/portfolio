@@ -38,7 +38,7 @@ export const SKILLS = [
     {
         id: 7,
         name: 'Flask',
-        imgurl: 'flask.jpg',
+        imgurl: 'flask.png',
         startYear: 2016
     },
     {
@@ -50,7 +50,7 @@ export const SKILLS = [
     {
         id: 10,
         name: 'mongoDB',
-        imgurl: 'mongodb.jpg',
+        imgurl: 'mongodb.png',
         startYear: 2021
     },
     {
@@ -117,7 +117,7 @@ export const SKILLS = [
     {
         id: 21,
         name: 'Looker',
-        imgurl: 'looker.png',
+        imgurl: 'looker.jpg',
         startYear: 2022
     },
     {
