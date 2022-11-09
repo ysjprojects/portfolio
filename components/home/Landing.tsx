@@ -50,17 +50,17 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
                             </h1>
 
                             <h1 className="d-none d-md-block">
-                                I like to build stuff
+                                I like to build and explore
                             </h1>
 
                             <h3 className="d-md-none d-block">
-                                I like to build stuff
+                                I like to build and explore
                             </h3>
                             <h4 className="d-none d-md-block">
-                                I&apos;m a software developer and tech enthusiast from <span onClick={() => toSgUrl()} style={{ cursor: 'pointer' }} className="fi fi-sg"></span>
+                                Data Science • Blockchain • DeFi
                             </h4>
                             <h5 className="d-block d-md-none">
-                                I&apos;m a software developer and tech enthusiast from <span onClick={() => toSgUrl()} style={{ cursor: 'pointer' }} className="fi fi-sg"></span>
+                                Data Science • Blockchain • DeFi
                             </h5>
                             <br />
 

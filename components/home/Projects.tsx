@@ -108,7 +108,7 @@ const Projects = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateA
                 <div className="ps-lg-5 pe-lg-5">
                     <div className="ps-lg-5 pe-lg-5">
                         <div className="ps-lg-5 pe-lg-5">
-                            <div className="ps-lg-5 pe-lg-5 text-start row row-cols-1 row-cols-md-2 g-4">
+                            <div className="ps-lg-5 pe-lg-5 text-start row row-cols-1 row-cols-md-3 g-4">
                                 {projectsList}
                             </div>
                         </div>

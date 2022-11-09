@@ -15,17 +15,24 @@ export const PROJECTS = [
     },
     {
         'id': 3,
-        'name': 'KEKapi',
-        'url': 'http://www.kekapi.com/',
-        'thumbnail': 'kekapi.png',
-        'shortDesc': 'A collection of free API services'
+        'name': 'ParsERC20',
+        'url': 'http://parserc20.kekapi.com/',
+        'thumbnail': 'parserc20.jpg',
+        'shortDesc': 'A programmatic way to retrieve balance of ERC20 tokens in an account'
     },
     {
         'id': 4,
         'name': 'Covvizzes',
         'url': 'https://covvizzes.sjyu.xyz',
         'thumbnail': 'covvizzes.png',
-        'shortDesc': 'An interactive Covid-19 dashboard built with Amcharts'
+        'shortDesc': 'An interactive Covid-19 dashboard and API service'
+    },
+    {
+        'id': 5,
+        'name': 'Pixel Protocol',
+        'url': 'https://www.pixelprotocol.net/',
+        'thumbnail': 'pixelprotocol.jpg',
+        'shortDesc': 'A decentralized, NFT-based canvas for public discourse'
     }
 
 ]

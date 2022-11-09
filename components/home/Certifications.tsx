@@ -14,6 +14,89 @@ type Certification = {
 
 type Data = Certification[]
 
+const RenderTitle = () => {
+    return (
+        <div style={{ maxWidth: '500px', margin: '0 auto' }} className="row row-cols-12 text-uppercase text-center">
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1>
+                        <span className="text-info">c</span>
+
+                    </h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1><span className="text-warning">e</span></h1>
+
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">r</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-info">t</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-warning">i</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">f</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1>
+                        <span className="text-info">i</span>
+
+                    </h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+                    <h1><span className="text-warning">c</span></h1>
+
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">a</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-info">t</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-warning">e</span></h1>
+                </div>
+            </div>
+            <div className="col">
+                <div style={{ paddingTop: '100%' }}>
+
+                    <h1><span className="text-light">s</span></h1>
+                </div>
+            </div>
+        </div>
+
+    )
+}
 
 const badgeColor = (type: string) => {
     if (type === 'specialization') return 'success'
@@ -75,8 +158,7 @@ const Certifications = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.Set
         <div id="certifs-div" className="bg-dark text-start">
             <div className="container pt-5 pb-5">
                 <div className="mb-5">
-                    <h1 className="d-none d-md-block spaced-out display-4 text-uppercase text-center">certifications</h1>
-                    <h1 className="d-block d-md-none spaced-out-mobile text-uppercase text-center">certifications</h1>
+                    <RenderTitle />
                 </div>
                 <div>
                     <ul className="ps-0">

@@ -45,11 +45,9 @@ const About = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateActi
                             <h1 className="display-4">About Me&nbsp; <Button size="sm" onClick={toggle} className="text-light rounded-pill d-none d-lg-inline-block" color="success">&nbsp;&nbsp;View CV&nbsp;&nbsp;</Button><Button size="sm" onClick={() => window.open('/resources/CV_YU_SHI_JIE.pdf', '_blank')} className="text-light rounded-pill d-inline-block d-lg-none" color="success">&nbsp;&nbsp;View CV&nbsp;&nbsp;</Button></h1>
                             <p className="lead">I am an avid full-stack developer and aspiring data scientist.</p>
                             <p className="lead">I am fascinated by the world of blockchain and decentralized finance.</p>
-                            <p className="lead">In the future, I hope to make a positive impact in the field of computing and information technology.</p>
+                            <p className="lead">I strive to create a positive impact everywhere I go.</p>
 
                         </div>
-
-
 
                     </div>
                 </div>
