@@ -216,5 +216,11 @@ export const SKILLS = [
         imgurl: 'seaborn.png',
         startYear: 2022
     },
+    {
+        id: 38,
+        name: 'Tensorflow',
+        imgurl: 'tensorflow.png',
+        startYear: 2022
+    },
 
 ]

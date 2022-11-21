@@ -151,11 +151,10 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
         indicesListByCat = {
             'frontend': [1, 2, 3, 18, 4, 5, 22, 30],
             'backend': [6, 7, 9, 10],
-            'analytics': [12, 13, 21],
-            'python': [32, 33, 34, 35, 36, 37, 31],
+            'analytics': [12, 13, 21, 29, 27],
+            'python': [32, 33, 34, 35, 36, 37, 31, 38],
             'blockchain': [15, 19, 24, 16, 20, 14],
-            'cloud': [27, 28],
-            'miscellaneous': [23, 11, 17, 25, 26, 29]
+            'miscellaneous': [23, 11, 17, 25, 26, 28]
         }
         let indices: number[] = indicesListByCat[category]
         let filteredSkills: Data = []
@@ -197,11 +196,6 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
         )
     })
 
-    const cloud = getSkillsByCat('cloud').map((skill) => {
-        return (
-            <RenderSkill key={skill.id} skill={skill} />
-        )
-    })
 
     const miscellaneous = getSkillsByCat('miscellaneous').map((skill) => {
         return (
@@ -281,26 +275,13 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
 
+
                     <div className="col">
                         <div className="card bg-transparent h-100 border-light">
                             <div className="card-header text-uppercase border-light text-light">
-                                cloud
-                            </div>
-                            <div className="card-body text-light pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
-
-                                    {cloud}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col">
-                        <div className="card bg-transparent h-100 border-info">
-                            <div className="card-header text-uppercase border-info text-info">
                                 miscellaneous
                             </div>
-                            <div className="card-body text-info pt-0 pb-0">
+                            <div className="card-body text-light pt-0 pb-0">
                                 <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
 
                                     {miscellaneous}

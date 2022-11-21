@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useSWR from "swr";
 
 import { SocialIcon } from "react-social-icons";
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 
+import { PDFObject } from "react-pdfobject";
 
 
 type Data = {
@@ -13,20 +15,25 @@ type Data = {
 
 const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const { data, error } = useSWR('/api/socials', (url: string) => fetch(url).then(res => res.json()))
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
+
 
 
     if (error) return <div>Error</div>
     if (!data) return <div>Loading...</div>
 
-    setIsLoaded(true)
 
+
+    setIsLoaded(true)
 
 
 
     const socials = data as Data
 
     const socialBtns = socials.map((social) => {
-        return (<SocialIcon key={social.id} className="me-2"
+        return (<SocialIcon fgColor="#FFFFFF" key={social.id} className="me-2"
             url={social.url} target="_blank" />)
     })
 
@@ -39,6 +46,16 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
 
 
         <div id='landing-div'>
+            <Modal size="lg" isOpen={modal}
+                toggle={toggle}
+            >
+                <ModalHeader >
+                    <button type="button" className="btn-close" onClick={toggle} aria-label="Close"></button>
+                </ModalHeader>
+                <ModalBody>
+                    <PDFObject height="80vh" url="/resources/CV_YU_SHI_JIE.pdf" />                </ModalBody>
+
+            </Modal>
 
 
             <div id="landing-div-container" className="container-fluid">
@@ -65,7 +82,7 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
                             <br />
 
                             <div>
-                                {socialBtns}
+                                {socialBtns} <Button onClick={toggle} color="success" className="text-light rounded-pill btn-labeled" size="lg"><span className="btn-label"><i className="fa fa-chevron-right"></i></span>View CV</Button>
                             </div>
                         </div>
 

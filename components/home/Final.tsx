@@ -20,7 +20,7 @@ const Final = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateActi
 
     const len = socials.length;
     const socialBtns = socials.map((social) => {
-        return (<SocialIcon key={social.id} className={social.id !== len ? 'me-2' : ''}
+        return (<SocialIcon fgColor="#FFFFFF" key={social.id} className={social.id !== len ? 'me-2' : ''}
             url={social.url} target="_blank" />)
     })
     return (

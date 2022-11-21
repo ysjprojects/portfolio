@@ -9,10 +9,5 @@ export const SOCIALS = [
         id: 2,
         name: 'github',
         url: 'https://github.com/ysjprojects',
-    },
-    {
-        id: 3,
-        name: 'reddit',
-        url: 'https://www.reddit.com/user/sjtopkek'
-    },
+    }
 ]
