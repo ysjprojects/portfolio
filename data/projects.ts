@@ -15,20 +15,13 @@ export const PROJECTS = [
     },
     {
         'id': 3,
-        'name': 'ParsERC20',
-        'url': 'http://parserc20.kekapi.com/',
-        'thumbnail': 'parserc20.jpg',
-        'shortDesc': 'A programmatic way to retrieve balance of ERC20 tokens in an account'
-    },
-    {
-        'id': 4,
         'name': 'Covvizzes',
         'url': 'https://covvizzes.sjyu.xyz',
         'thumbnail': 'covvizzes.png',
         'shortDesc': 'An interactive Covid-19 dashboard and API service'
     },
     {
-        'id': 5,
+        'id': 4,
         'name': 'Pixel Protocol',
         'url': 'https://www.pixelprotocol.net/',
         'thumbnail': 'pixelprotocol.jpg',

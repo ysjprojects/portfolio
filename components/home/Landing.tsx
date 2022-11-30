@@ -53,7 +53,7 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
                     <button type="button" className="btn-close" onClick={toggle} aria-label="Close"></button>
                 </ModalHeader>
                 <ModalBody>
-                    <PDFObject height="80vh" url="/resources/CV_YU_SHI_JIE.pdf" />                </ModalBody>
+                    <PDFObject height="80vh" url="/resume.pdf" />                </ModalBody>
 
             </Modal>
 
@@ -82,7 +82,7 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
                             <br />
 
                             <div>
-                                {socialBtns} <Button onClick={toggle} color="success" className="text-light rounded-pill btn-labeled" size="lg"><span className="btn-label"><i className="fa fa-chevron-right"></i></span>View CV</Button>
+                                {socialBtns} <Button onClick={toggle} color="success" className="text-light rounded-pill btn-labeled" size="lg"><span className="btn-label"><i className="fa fa-chevron-right"></i></span>View Resume</Button>
                             </div>
                         </div>
 
