@@ -29,7 +29,7 @@ const Header = () => {
           <NavItem>
               <NavLink href="#home">    
             
-              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='warning'>Home</Button>
+              <Button className='d-lg-block d-none navbar-button mx-3' size='lg' outline color='warning'>Home</Button>
                 <span className='d-lg-none d-block text-warning'>Home</span>
               </NavLink>
             </NavItem>
