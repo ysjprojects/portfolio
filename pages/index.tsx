@@ -29,11 +29,17 @@ const Home: NextPage = () => {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
       <div>
+        <div id='home'></div>
         <Landing setIsLoaded={setLandingIsLoaded} />
         <About setIsLoaded={setAboutIsLoaded} />
+        <div id='skills'></div>
         <Skills setIsLoaded={setSkillsIsLoaded} />
         {/*<Certifications setIsLoaded={setCertifsIsLoaded} />*/}
+        <div id='awards'></div>
+
         <Awards setIsLoaded={setAwardsIsLoaded} />
+        <div id='builds'></div>
+
         <Projects setIsLoaded={setProjectsIsLoaded} />
         <Final setIsLoaded={setFinalIsLoaded} />
       </div>
