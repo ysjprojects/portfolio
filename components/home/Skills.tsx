@@ -104,9 +104,9 @@ const RenderSkill = ({ skill }: { skill: Skill }) => {
 
                     }}>
                         <div className="text-center">
-                            <h5 className="mb-0">
+                            <p className="mb-0 fw-bold">
                                 {skill.name}
-                            </h5>
+                            </p>
                             {skill.startYear > 0 ?
                                 <p className="mb-2">
                                     {getYears(currYear, skill.startYear)
@@ -153,7 +153,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
             'backend': [6, 7, 9, 10],
             'analytics': [12, 13, 21, 29, 27],
             'python': [32, 33, 34, 35, 36, 37, 31, 38],
-            'blockchain': [15, 19, 24, 16, 20, 14],
+            'blockchain': [15, 19, 24, 16, 20, 14,39],
             'miscellaneous': [23, 11, 17, 25, 26, 28]
         }
         let indices: number[] = indicesListByCat[category]
@@ -211,12 +211,12 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                 </div>
                 <div className="row row-cols-1 row-cols-md-2 g-4">
                     <div className="col">
-                        <div className="card bg-transparent h-100 border-info">
-                            <div className="card-header text-info border-info text-uppercase">
-                                front-end
+                        <div className="card-border-custom card bg-transparent h-100 border-info">
+                            <div className="fw-bold card-header-border-custom card-header text-info border-info text-uppercase">
+                                frontend
                             </div>
                             <div className="card-body text-info pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
                                     {frontend}
                                 </div>
 
@@ -224,24 +224,24 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card bg-transparent h-100 border-warning">
-                            <div className="card-header border-warning text-warning text-uppercase">
-                                back-end
+                        <div className="card-border-custom card bg-transparent h-100 border-warning">
+                            <div className="fw-bold card-header-border-custom card-header border-warning text-warning text-uppercase">
+                                backend
                             </div>
                             <div className="card-body text-warning pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
                                     {backend}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card bg-transparent h-100 border-light">
-                            <div className="card-header text-uppercase border-light text-light">
+                        <div className="card-border-custom card bg-transparent h-100 border-light">
+                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-light text-light">
                                 analytics
                             </div>
                             <div className="card-body text-light pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {analytics}
                                 </div>
@@ -249,12 +249,12 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card bg-transparent h-100 border-info">
-                            <div className="card-header text-uppercase border-info text-info">
+                        <div className="card-border-custom card bg-transparent h-100 border-info">
+                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-info text-info">
                                 blockchain
                             </div>
                             <div className="card-body text-info pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {blockchain}
                                 </div>
@@ -262,12 +262,12 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card bg-transparent h-100 border-warning">
-                            <div className="card-header text-uppercase border-warning text-warning">
+                        <div className="card-border-custom card bg-transparent h-100 border-warning">
+                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-warning text-warning">
                                 python data science
                             </div>
                             <div className="card-body text-warning pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {pythonDataScience}
                                 </div>
@@ -277,12 +277,12 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
 
 
                     <div className="col">
-                        <div className="card bg-transparent h-100 border-light">
-                            <div className="card-header text-uppercase border-light text-light">
+                        <div className="card-border-custom card bg-transparent h-100 border-light">
+                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-light text-light">
                                 miscellaneous
                             </div>
                             <div className="card-body text-light pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4'>
+                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {miscellaneous}
                                 </div>

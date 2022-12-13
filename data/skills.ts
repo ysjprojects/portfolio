@@ -152,14 +152,14 @@ export const SKILLS = [
     },
     {
         id: 27,
-        name: 'Amazon EMR',
-        imgurl: 'emr.png',
+        name: 'Qubole',
+        imgurl: 'qubole.png',
         startYear: 2022
     },
     {
         id: 28,
-        name: 'Amazon EC2',
-        imgurl: 'ec2.png',
+        name: 'Amazon Web Services',
+        imgurl: 'aws.png',
         startYear: 2021
     },
     {
@@ -221,6 +221,12 @@ export const SKILLS = [
         name: 'Tensorflow',
         imgurl: 'tensorflow.png',
         startYear: 2022
+    },
+    {
+        id: 39,
+        name: 'Hardhat',
+        imgurl: 'hardhat.png',
+        startYear: 2020
     },
 
 ]

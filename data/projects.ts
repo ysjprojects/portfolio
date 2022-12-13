@@ -25,7 +25,7 @@ export const PROJECTS = [
         'name': 'Pixel Protocol',
         'url': 'https://www.pixelprotocol.net/',
         'thumbnail': 'pixelprotocol.jpg',
-        'shortDesc': 'A decentralized, NFT-based canvas for public discourse'
+        'shortDesc': 'A decentralized web3 canvas for public discourse'
     }
 
 ]

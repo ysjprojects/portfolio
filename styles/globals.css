@@ -209,3 +209,13 @@ button {
   border-width: 5px;
   font-weight: 900;
 }
+
+.card-border-custom {
+  border: 3px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+}
+
+.card-header-border-custom {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+}
