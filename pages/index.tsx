@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       <div>
         <div id='home'></div>
         <Landing setIsLoaded={setLandingIsLoaded} />
-        <About setIsLoaded={setAboutIsLoaded} />
+        {/*<About setIsLoaded={setAboutIsLoaded} />*/}
         <div id='skills'></div>
         <Skills setIsLoaded={setSkillsIsLoaded} />
         {/*<Certifications setIsLoaded={setCertifsIsLoaded} />*/}

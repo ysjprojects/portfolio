@@ -24,7 +24,7 @@ const Final = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateActi
             url={social.url} target="_blank" />)
     })
     return (
-        <div id="final-div" className="pb-5">
+        <div id="final-div" className="py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-8">

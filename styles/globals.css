@@ -18,7 +18,6 @@ a {
 
 
 #landing-div {
-  min-height: 100vh;
   color: whitesmoke;
   background-size: cover;
   background-image: #121212;
@@ -147,12 +146,6 @@ button:focus {
   font-size: 1em;
 }
 
-#landing-div-container {
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
 
 #landing-div-section-1 {
   position: relative;

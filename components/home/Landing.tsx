@@ -57,28 +57,26 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
 
             </Modal>
 
-
-            <div id="landing-div-container" className="container-fluid">
+            <div className="container min-vh-100 position-relative">
+            <div style={{top:'50%', transform:'translateY(-50%)', padding:'inherit'}} className="position-absolute">
                 <div className="row mb-0 pt-5 pb-5">
-                    <div className="text-center text-lg-start offset-lg-1 col-lg-6">
+                    <div className="text-start">
                         <div id="landing-div-section-1">
-                            <h1 className="text-uppercase display-4">
+                            <h1 style={{color:'#FF5733'}} className="fw-normal text-uppercase display-4">
                                 Hi, I&apos;m SJ
                             </h1>
 
-                            <h1 className="d-none d-md-block">
+                            <h1 className="text-uppercase display-4">
                                 I like to build and explore
                             </h1>
 
-                            <h3 className="d-md-none d-block">
-                                I like to build and explore
-                            </h3>
-                            <h4 className="d-none d-md-block">
-                                Data Science • Blockchain • DeFi
-                            </h4>
-                            <h5 className="d-block d-md-none">
-                                Data Science • Blockchain • DeFi
+                            <h5 className="d-none d-md-block text-uppercase" style={{color:'#ababab'}}>
+                                I have <span className='text-light fw-bolder'>6 years</span> of <span className='text-light fw-bolder'>Developer</span> experience and <span className='fw-bolder text-light'>3 years</span> of <span className='fw-bolder text-light'>Blockchain</span> experience. I am an avid <span className='text-light fw-bolder'>Buidler</span> and <span className='text-light fw-bolder'>Explorer</span> in the <span className='text-light fw-bolder'>Web3</span> and <span className='text-light fw-bolder'>Machine Learning</span> space. My <span className='text-light fw-bolder'>Goal</span> in life is to create a <span className='text-light fw-bolder'>Positive</span> impact everywhere I go.
                             </h5>
+
+                            <p className="d-block d-md-none text-uppercase" style={{color:'#ababab'}}>
+                                I have <span className='text-light fw-bolder'>6 years</span> of <span className='text-light fw-bolder'>Developer</span> experience and <span className='fw-bolder text-light'>3 years</span> of <span className='fw-bolder text-light'>Blockchain</span> experience. I am an avid <span className='text-light fw-bolder'>Buidler</span> and <span className='text-light fw-bolder'>Explorer</span> in the <span className='text-light fw-bolder'>Web3</span> and <span className='text-light fw-bolder'>Machine Learning</span> space. My <span className='text-light fw-bolder'>Goal</span> in life is to create a <span className='text-light fw-bolder'>Positive</span> impact everywhere I go.
+                            </p>
                             <br />
 
                             <div>
@@ -91,6 +89,8 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
                 </div>
 
             </div>
+            </div>
+           
 
 
 

@@ -216,7 +216,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                                 frontend
                             </div>
                             <div className="card-body text-info pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
+                                <div className='row row-cols-3 row-cols-lg-4 row-cols-xxl-6'>
                                     {frontend}
                                 </div>
 
@@ -229,7 +229,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                                 backend
                             </div>
                             <div className="card-body text-warning pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
+                                <div className='row row-cols-3 row-cols-lg-4 row-cols-xxl-6'>
                                     {backend}
                                 </div>
                             </div>
@@ -241,7 +241,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                                 analytics
                             </div>
                             <div className="card-body text-light pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
+                                <div className='row row-cols-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {analytics}
                                 </div>
@@ -254,7 +254,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                                 blockchain
                             </div>
                             <div className="card-body text-info pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
+                                <div className='row row-cols-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {blockchain}
                                 </div>
@@ -267,7 +267,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                                 python data science
                             </div>
                             <div className="card-body text-warning pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
+                                <div className='row row-cols-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {pythonDataScience}
                                 </div>
@@ -282,7 +282,7 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                                 miscellaneous
                             </div>
                             <div className="card-body text-light pt-0 pb-0">
-                                <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6'>
+                                <div className='row row-cols-3 row-cols-lg-4 row-cols-xxl-6'>
 
                                     {miscellaneous}
                                 </div>
