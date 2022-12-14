@@ -16,7 +16,10 @@ type Data = {
 const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const { data, error } = useSWR('/api/socials', (url: string) => fetch(url).then(res => res.json()))
     const [modal, setModal] = useState(false);
-    const toggle = () => setModal(!modal);
+    const toggle = () => {
+        //setModal(!modal);
+        window.open('/resume.pdf','_blank')
+    }
 
 
 
@@ -53,7 +56,8 @@ const Landing = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAc
                     <button type="button" className="btn-close" onClick={toggle} aria-label="Close"></button>
                 </ModalHeader>
                 <ModalBody>
-                    <PDFObject height="80vh" url="/resume.pdf" />                </ModalBody>
+                    <PDFObject height="80vh" url="/resume.pdf" />
+                </ModalBody>
 
             </Modal>
 

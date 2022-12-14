@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         <Projects setIsLoaded={setProjectsIsLoaded} />
         <Final setIsLoaded={setFinalIsLoaded} />
       </div>
-      {(landingIsLoaded && aboutIsLoaded && skillsIsLoaded && /*certifsIsLoaded &&*/ awardsIsLoaded && projectsIsLoaded && finalIsLoaded) ? null : <Loading />}
+      {(landingIsLoaded && /*aboutIsLoaded &&*/ skillsIsLoaded && /*certifsIsLoaded &&*/ awardsIsLoaded && projectsIsLoaded && finalIsLoaded) ? null : <Loading />}
     </>
 
   )
