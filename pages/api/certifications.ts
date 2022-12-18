@@ -9,8 +9,9 @@ type Entry = {
   type: string,
   year: number,
   title: string,
+  org: string,
   url: string,
-  courses: string[]
+  desc: string
 }
 
 
