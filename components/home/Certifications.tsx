@@ -8,103 +8,29 @@ type Certification = {
     type: string,
     year: number,
     title: string,
+    org: string,
     url: string,
-    courses: string[]
+    desc: string
 }
 
 type Data = Certification[]
 
 const RenderTitle = () => {
     return (
-        <div style={{ maxWidth: '500px', margin: '0 auto' }} className="row row-cols-12 text-uppercase text-center">
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-                    <h1>
-                        <span className="text-info">c</span>
-
-                    </h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-                    <h1><span className="text-warning">e</span></h1>
-
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-light">r</span></h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-info">t</span></h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-warning">i</span></h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-light">f</span></h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-                    <h1>
-                        <span className="text-info">i</span>
-
-                    </h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-                    <h1><span className="text-warning">c</span></h1>
-
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-light">a</span></h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-info">t</span></h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-warning">e</span></h1>
-                </div>
-            </div>
-            <div className="col">
-                <div style={{ paddingTop: '100%' }}>
-
-                    <h1><span className="text-light">s</span></h1>
-                </div>
-            </div>
+        <div className="h1 text-uppercase text-center">
+            certifications & courses
         </div>
 
     )
 }
 
 const badgeColor = (type: string) => {
-    if (type === 'specialization') return 'success'
-    else if (type === 'course') return 'warning'
-    else if (type === 'learning path') return 'info'
-    else return 'primary'
+    if (type === 'certification') return 'success'
+    else if (type === 'course') return 'primary'
+    else return 'danger'
 }
 
+/*
 const NestedCertifs = ({ titles, id }: { titles: String[], id: number }) => {
     const nestedCertifs = titles.map((title, index) => {
         return (
@@ -132,6 +58,7 @@ const NestedCertifs = ({ titles, id }: { titles: String[], id: number }) => {
 
     )
 }
+*/
 
 const Certifications = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
@@ -144,12 +71,9 @@ const Certifications = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.Set
     const certifs = data as Data
     const certifsList = certifs.map((certif) => {
         return (
-            <li key={certif.id} className="list-unstyled mb-5"><h4><a href={certif.url} target="_blank" rel="noreferrer">{certif.title}</a> &nbsp;<span className="d-none d-md-inline-block text-muted">&bull;&nbsp; {certif.year}</span><span className={`d-none d-md-inline-block badge bg-${badgeColor(certif.type)} ms-3`}>{certif.type}</span></h4>
-
-                {
-                    certif.courses.length !== 0 ?
-                        <NestedCertifs titles={certif.courses} id={certif.id} /> : undefined
-                }
+            <li key={certif.id} className="list-unstyled mb-5"><h4><a href={certif.url} target="_blank" rel="noreferrer">{certif.title}</a></h4>
+                <h4><span className={`d-none d-md-inline-block badge bg-${badgeColor(certif.type)} me-3`}>{certif.type}</span><span className={`d-none d-md-inline-block badge bg-secondary me-3`}>{certif.org}</span><span className="d-none d-md-inline-block text-warning">{certif.year}</span></h4>
+                <div className="h5 fw-lighter">{certif.desc}</div>
 
             </li>
         )

@@ -53,6 +53,15 @@ export const AWARDS = [
         'thumbnail': 'noi.png',
         'imgs': []
     },
+    {
+        'id': 7,
+        'name': 'Solana Builders League',
+        'prize': '1st',
+        'year': 2022,
+        'descHTML': '',
+        'thumbnail': 'sbl.png',
+        'imgs': []
+    },
 
 
 ]

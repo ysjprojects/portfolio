@@ -101,18 +101,12 @@ const Projects = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateA
     })
     return (
         <div id="projects-div" className="bg-dark">
-            <div className="container pt-5 pb-5">
+            <div className="container py-5" style={{ maxWidth: "970px" }}>
                 <div className="mb-5">
                     <RenderTitle />
                 </div>
-                <div className="ps-lg-5 pe-lg-5">
-                    <div className="ps-lg-5 pe-lg-5">
-                        <div className="ps-lg-5 pe-lg-5">
-                            <div className="ps-lg-5 pe-lg-5 text-start row row-cols-1 row-cols-md-3 g-4">
-                                {projectsList}
-                            </div>
-                        </div>
-                    </div>
+                <div className="text-start row row-cols-1 row-cols-md-3 g-4">
+                    {projectsList}
                 </div>
 
 

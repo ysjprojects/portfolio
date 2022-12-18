@@ -34,16 +34,17 @@ const Home: NextPage = () => {
         {/*<About setIsLoaded={setAboutIsLoaded} />*/}
         <div id='skills'></div>
         <Skills setIsLoaded={setSkillsIsLoaded} />
-        {/*<Certifications setIsLoaded={setCertifsIsLoaded} />*/}
+        
         <div id='awards'></div>
 
         <Awards setIsLoaded={setAwardsIsLoaded} />
         <div id='builds'></div>
 
         <Projects setIsLoaded={setProjectsIsLoaded} />
+        <Certifications setIsLoaded={setCertifsIsLoaded} />
         <Final setIsLoaded={setFinalIsLoaded} />
       </div>
-      {(landingIsLoaded && /*aboutIsLoaded &&*/ skillsIsLoaded && /*certifsIsLoaded &&*/ awardsIsLoaded && projectsIsLoaded && finalIsLoaded) ? null : <Loading />}
+      {(landingIsLoaded && /*aboutIsLoaded &&*/ skillsIsLoaded && certifsIsLoaded && awardsIsLoaded && projectsIsLoaded && finalIsLoaded) ? null : <Loading />}
     </>
 
   )

@@ -212,3 +212,7 @@ button {
   border-bottom: 3px solid rgba(0, 0, 0, 0.125);
   border-radius: 0;
 }
+
+.border-none{
+  border:none;
+}

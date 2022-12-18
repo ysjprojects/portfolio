@@ -211,8 +211,8 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                 </div>
                 <div className="row row-cols-1 row-cols-md-2 g-4">
                     <div className="col">
-                        <div className="card-border-custom card bg-transparent h-100 border-info">
-                            <div className="fw-bold card-header-border-custom card-header text-info border-info text-uppercase">
+                        <div className="border-none card bg-transparent h-100 border-info">
+                            <div className="h5 fw-bold border-none card-header text-info border-info text-uppercase">
                                 frontend
                             </div>
                             <div className="card-body text-info pt-0 pb-0">
@@ -224,8 +224,8 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card-border-custom card bg-transparent h-100 border-warning">
-                            <div className="fw-bold card-header-border-custom card-header border-warning text-warning text-uppercase">
+                        <div className="border-none card bg-transparent h-100 border-warning">
+                            <div className="h5 fw-bold border-none card-header border-warning text-warning text-uppercase">
                                 backend
                             </div>
                             <div className="card-body text-warning pt-0 pb-0">
@@ -236,8 +236,8 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card-border-custom card bg-transparent h-100 border-light">
-                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-light text-light">
+                        <div className="border-none card bg-transparent h-100 border-light">
+                            <div className="h5 fw-bold border-none card-header text-uppercase border-light text-light">
                                 analytics
                             </div>
                             <div className="card-body text-light pt-0 pb-0">
@@ -249,8 +249,8 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card-border-custom card bg-transparent h-100 border-info">
-                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-info text-info">
+                        <div className="border-none card bg-transparent h-100 border-info">
+                            <div className="h5 fw-bold border-none card-header text-uppercase border-info text-info">
                                 blockchain
                             </div>
                             <div className="card-body text-info pt-0 pb-0">
@@ -262,8 +262,8 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
                         </div>
                     </div>
                     <div className="col">
-                        <div className="card-border-custom card bg-transparent h-100 border-warning">
-                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-warning text-warning">
+                        <div className="border-none card bg-transparent h-100 border-warning">
+                            <div className="h5 fw-bold border-none card-header text-uppercase border-warning text-warning">
                                 python data science
                             </div>
                             <div className="card-body text-warning pt-0 pb-0">
@@ -277,8 +277,8 @@ const Skills = ({ setIsLoaded }: { setIsLoaded: React.Dispatch<React.SetStateAct
 
 
                     <div className="col">
-                        <div className="card-border-custom card bg-transparent h-100 border-light">
-                            <div className="fw-bold card-header-border-custom card-header text-uppercase border-light text-light">
+                        <div className="border-none card bg-transparent h-100 border-light">
+                            <div className="h5 fw-bold border-none card-header text-uppercase border-light text-light">
                                 miscellaneous
                             </div>
                             <div className="card-body text-light pt-0 pb-0">
