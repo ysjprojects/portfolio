@@ -36,21 +36,29 @@ const Header = () => {
 
             <NavItem>
               <NavLink href="#skills">            
-              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='warning'>Skills</Button></NavLink>
+              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='warning'>Skills</Button>
               <span className='d-lg-none d-block text-warning'>Skills</span>
+              </NavLink>
 
             </NavItem>
             <NavItem>
               <NavLink href="#awards">
-              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='warning'>Awards</Button></NavLink>
+              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='warning'>Awards</Button>
               <span className='d-lg-none d-block text-warning'>Awards</span>
+              </NavLink>
 
             </NavItem>
             <NavItem>
               <NavLink href="#builds">
-              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='warning'>Builds</Button></NavLink>
+              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='warning'>Builds</Button>
               <span className='d-lg-none d-block text-warning'>Builds</span>
-
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://blog.sjyu.xyz" target="_blank">
+              <Button className='d-lg-block d-none navbar-button me-3' size='lg' outline color='danger'>Blog</Button>
+              <span className='d-lg-none d-block text-danger'>Blog</span>
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>

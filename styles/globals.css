@@ -31,6 +31,13 @@ a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/misc/about-bg.jpg");
 }
 
+#blog-div {
+  color: whitesmoke;
+  background-size: cover;
+  background-image: #121212;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/misc/blog-bg.jpg");
+}
+
 #skills-div {
   color: whitesmoke;
   background-size: cover;

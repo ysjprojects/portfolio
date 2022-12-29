@@ -11,6 +11,7 @@ import Skills from '../components/home/Skills';
 import Projects from '../components/home/Projects';
 import Final from '../components/home/Final';
 import Loading from '../components/home/Loading';
+import Blog from '../components/home/Blog';
 
 import React, { useState } from 'react';
 const Home: NextPage = () => {
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
   const [awardsIsLoaded, setAwardsIsLoaded] = useState(false)
   const [projectsIsLoaded, setProjectsIsLoaded] = useState(false)
   const [finalIsLoaded, setFinalIsLoaded] = useState(false)
+  const [blogIsLoaded, setBlogIsLoaded] = useState(false)
 
 
   return (
@@ -32,6 +34,7 @@ const Home: NextPage = () => {
         <div id='home'></div>
         <Landing setIsLoaded={setLandingIsLoaded} />
         {/*<About setIsLoaded={setAboutIsLoaded} />*/}
+        <Blog setIsLoaded={setBlogIsLoaded} />
         <div id='skills'></div>
         <Skills setIsLoaded={setSkillsIsLoaded} />
         
@@ -44,7 +47,7 @@ const Home: NextPage = () => {
         <Certifications setIsLoaded={setCertifsIsLoaded} />
         <Final setIsLoaded={setFinalIsLoaded} />
       </div>
-      {(landingIsLoaded && /*aboutIsLoaded &&*/ skillsIsLoaded && certifsIsLoaded && awardsIsLoaded && projectsIsLoaded && finalIsLoaded) ? null : <Loading />}
+      {(landingIsLoaded && blogIsLoaded && /*aboutIsLoaded &&*/ skillsIsLoaded && certifsIsLoaded && awardsIsLoaded && projectsIsLoaded && finalIsLoaded) ? null : <Loading />}
     </>
 
   )
